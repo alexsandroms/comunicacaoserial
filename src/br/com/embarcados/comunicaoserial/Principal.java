@@ -48,7 +48,7 @@ public class Principal extends javax.swing.JFrame {
 	}
 	
 	private void initGUI() {
-		Arduino arduino = new Arduino();
+		ArduinoEnvia arduino = new ArduinoEnvia();
 		try {
 			setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 			{
