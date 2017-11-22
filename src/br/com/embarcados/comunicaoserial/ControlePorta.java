@@ -3,10 +3,15 @@ package br.com.embarcados.comunicaoserial;
 import gnu.io.CommPortIdentifier;
 import gnu.io.NoSuchPortException;
 import gnu.io.SerialPort;
+
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.io.PrintWriter;
+
 import javax.swing.JOptionPane;
+
 import java.util.Scanner;
 
 public class ControlePorta {
@@ -55,16 +60,19 @@ public class ControlePorta {
 					SerialPort.PARITY_NONE); // receber e enviar dados
 
 			new Thread() {
-				public void run() {
+				public void run()  {
 					while (true) {
 						Scanner scanner = new Scanner(serialIn);
 						while (scanner.hasNextLine()) {
 							String msg1 = scanner.nextLine();
 							System.out.println(msg1);
-							if(msg1.length()>0){
-								salvarEmArquivo.gravarArq.printf(msg1+"\n");
+							try {
+								salvarEmArquivo.salvar(msg1 + "\n");
+							} catch (IOException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
 							}
-						}
+						}		
 					}
 				}
 			}.start();

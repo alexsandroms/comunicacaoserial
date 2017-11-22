@@ -24,6 +24,10 @@ import javax.swing.SwingUtilities;
 * LEGALLY FOR ANY CORPORATE OR COMMERCIAL PURPOSE.
 */
 public class Principal extends javax.swing.JFrame {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7599283594097900415L;
 	private JButton jButtonLigar;
 	private JButton jButtonSair;
 	private JButton jButtonDesligar;
