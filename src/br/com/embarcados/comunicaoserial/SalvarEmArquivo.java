@@ -1,9 +1,13 @@
 package br.com.embarcados.comunicaoserial;
 
 import java.io.BufferedWriter;
+<<<<<<< HEAD
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+=======
+import java.io.IOException;
+>>>>>>> 1610aa606d3d37571e167ebb013c3e63bad0f993
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
